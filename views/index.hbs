@@ -1,0 +1,37 @@
+<section id="departments" class="container department" data-aos="fade-up">
+  <div class="section-title">
+  </div>
+  <!-- Card deck -->
+  <div class="card-deck">
+    {{#each products}}
+    <!-- Card -->
+    <div class="card mb-4">
+      <!--Card image-->
+      <div class="view overlay">
+        <img style="height: 12rem; padding: .5rem;" class="card-img-top cardimage" src="{{this.image}}"
+          alt="Card image cap" />
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body">
+        <!--Title-->
+        <h4 class="card-title">{{this.name}}</h4>
+        <!--Text-->
+        <p class="card-text">
+          {{this.description}}
+        </p>
+        <p class="card-text">
+          {{this.price}}
+        </p>
+        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+
+        {{!-- <button onclick="addToCart('{{this._id}}')" class="btn btn-primary">Add to cart</button> --}}
+      </div>
+    </div>
+    {{/each}}
+
+  </div>
+</section>
